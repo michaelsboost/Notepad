@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Notepad</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <link rel="stylesheet" href="libraries/normalize/normalize.css" />
+    <link rel="stylesheet" href="libraries/alertifyjs/css/alertify.min.css" />
+    <link rel="stylesheet" href="libraries/alertifyjs/css/themes/default.min.css" />
+    <link rel="stylesheet" href="libraries/font-awesome/font-awesome.css" />
+    <link rel="stylesheet" href="libraries/font-awesome/macset.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <script src="libraries/alertifyjs/alertify.min.js"></script>
+    <script src="libraries/jszip/jszip.min.js"></script>
+    <script src="libraries/jszip/jszip-utils.js"></script>
+    <script src="libraries/jszip/FileSaver.js"></script>
+    <script src="libraries/jszip/Blob.js"></script>
+  </head>
+  <body>
+    <header>
+      <a class="pointer fl" id="newBtn">
+        <i class="fa fa-file"></i>
+      </a>
+      <label class="pointer fl" for="openfile">
+        <i class="fa fa-folder-open"></i>
+      </label>
+      <div class="hide">
+        <input type="file" accept="text/plain" id="openfile">
+      </div>
+
+      Notepad
+
+
+      <a class="pointer fr" id="saveBtn">
+        <i class="fa fa-download"></i>
+      </a>
+      <a class="invisible fr">
+        <i class="fa fa-folder-open"></i>
+      </a>
+    </header>
+
+    <textarea id="notepad" placeholder="notepad is empty..."></textarea>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>

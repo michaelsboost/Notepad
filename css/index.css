@@ -1,0 +1,54 @@
+@font-face {
+  font-family: FiraSans;
+  src: url("../libraries/font-awesome/FiraSans-Light.ttf");
+}
+@font-face {
+  font-family: Lato;
+  src: url("../libraries/font-awesome/Lato-Light.ttf");
+}
+
+html, body {
+  height: 100%;
+  overflow: auto;
+}
+
+header {
+  cursor: default;
+  text-align: center;
+  font-family: Lato, sans-serif;
+  padding: 10px;
+  color: #fff;
+/*   background: #1d72b1; */
+  background: #57a3eb;
+  font-size: 16pt;
+}
+header .pointer {
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+textarea {
+  font-family: FiraSans;
+  width: calc(100% - 10px);
+  height: calc(100% - 60px);
+  border: 0;
+  padding: 5px;
+  resize: none;
+}
+textarea:focus {
+  outline: none;
+}
+
+/* misc variable classes */
+.hide {
+  display: none;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.invisible {
+  visibility: hidden;
+}
