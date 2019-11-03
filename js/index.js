@@ -1,6 +1,7 @@
 // load file function
 function loadfile(input) {
   var reader = new FileReader();
+  var path = input.value;
   reader.onload = function(e) {
     if (path.toLowerCase().substring(path.length - 4 === ".txt")) {
       notepad.value = e.target.result;
