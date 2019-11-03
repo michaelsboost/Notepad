@@ -11,6 +11,13 @@ function loadfile(input) {
   };
   reader.readAsText(input.files[0]);
 };
+function dropfile(file) {
+  var reader = new FileReader();
+  reader.onload = function(e) {
+    notepad.value = e.target.result;
+  };
+  reader.readAsText(file, "UTF-8");
+}
 
 // clear notepad
 newBtn.onclick = function() {
@@ -20,6 +27,12 @@ newBtn.onclick = function() {
 // open file in notepad
 openfile.onchange = function() {
   loadfile(this);
+};
+notepad.ondrop = function(e) {
+  this.value = "";
+  e.preventDefault();
+  var file = e.dataTransfer.files[0];
+  dropfile(file);
 };
 
 // export file 
