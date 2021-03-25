@@ -49,16 +49,16 @@ saveBtn.onclick = function() {
 if (localStorage.getItem("notepad")) {
   notepad.value = localStorage.getItem("notepad", this.value);
 }
-function rememberStorage() {
-  if (!this.value) {
+function rememberStorage(e) {
+  if (!e.value) {
 	localStorage.clear();
   } else {
-	localStorage.setItem("notepad", this.value);
+	localStorage.setItem("notepad", e.value);
   }
 };
 notepad.onkeyup = function() {
-  rememberStorage();
+  rememberStorage(this);
 };
 notepad.onchange = function() {
-  rememberStorage();
+  rememberStorage(this);
 };
